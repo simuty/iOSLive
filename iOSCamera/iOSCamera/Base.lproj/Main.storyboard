@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OW7-Xf-wl5">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PSm-kJ-tWT">
+                                <rect key="frame" x="20" y="20" width="560" height="300"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="3UK-JH-Ksq"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpi-ja-8w7">
+                                <rect key="frame" x="455" y="70" width="75" height="30"/>
+                                <state key="normal" title="摄像头切换">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeCanmera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kVe-RQ-gUy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="单击聚焦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbO-pk-EjD">
+                                <rect key="frame" x="462" y="229" width="68" height="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="双击缩放" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urm-ze-Ml1">
+                                <rect key="frame" x="462" y="268" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcj-ve-CRa">
+                                <rect key="frame" x="355" y="377" width="60" height="30"/>
+                                <state key="normal" title="结束录制"/>
+                                <connections>
+                                    <action selector="stopCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dwS-ZL-6kh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Isy-0x-g3y">
+                                <rect key="frame" x="205" y="478" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7P-BN-gAq">
+                                <rect key="frame" x="25" y="377" width="60" height="30"/>
+                                <state key="normal" title="开始录制"/>
+                                <connections>
+                                    <action selector="startCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qgV-JO-lI5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qcj-ve-CRa" firstAttribute="centerY" secondItem="H7P-BN-gAq" secondAttribute="centerY" id="0Hi-QL-nrE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Isy-0x-g3y" secondAttribute="bottom" constant="30" id="D9A-po-kvG"/>
+                            <constraint firstItem="xbO-pk-EjD" firstAttribute="top" secondItem="urm-ze-Ml1" secondAttribute="bottom" constant="-60" id="DWk-84-rdP"/>
+                            <constraint firstItem="H7P-BN-gAq" firstAttribute="top" secondItem="PSm-kJ-tWT" secondAttribute="bottom" constant="57" id="Gdh-oJ-sZP"/>
+                            <constraint firstItem="H7P-BN-gAq" firstAttribute="leading" secondItem="PSm-kJ-tWT" secondAttribute="leading" id="HGu-wV-rxZ"/>
+                            <constraint firstItem="qcj-ve-CRa" firstAttribute="trailing" secondItem="PSm-kJ-tWT" secondAttribute="trailing" id="HSs-jQ-SHM"/>
+                            <constraint firstItem="Isy-0x-g3y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Je2-Ag-i4U"/>
+                            <constraint firstItem="dpi-ja-8w7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Rik-8n-rmU"/>
+                            <constraint firstItem="xbO-pk-EjD" firstAttribute="bottom" secondItem="PSm-kJ-tWT" secondAttribute="bottom" constant="-70" id="Trb-tX-bUG"/>
+                            <constraint firstItem="xbO-pk-EjD" firstAttribute="trailing" secondItem="dpi-ja-8w7" secondAttribute="trailing" id="VA4-Q6-DCr"/>
+                            <constraint firstItem="PSm-kJ-tWT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Y6F-yc-dKO"/>
+                            <constraint firstItem="qcj-ve-CRa" firstAttribute="leading" secondItem="PSm-kJ-tWT" secondAttribute="leading" id="dOI-Gc-0eO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PSm-kJ-tWT" secondAttribute="trailing" id="jsT-4O-aoH"/>
+                            <constraint firstItem="PSm-kJ-tWT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="moQ-bg-7bu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dpi-ja-8w7" secondAttribute="trailing" constant="50" id="sx8-wR-lNL"/>
+                            <constraint firstItem="urm-ze-Ml1" firstAttribute="trailing" secondItem="xbO-pk-EjD" secondAttribute="trailing" id="yal-6e-IBF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dOI-Gc-0eO"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="u8e-kO-sC8"/>
+                    <connections>
+                        <outlet property="changeBtn" destination="dpi-ja-8w7" id="0MM-rz-DYi"/>
+                        <outlet property="doubleLab" destination="urm-ze-Ml1" id="bJS-6N-jrZ"/>
+                        <outlet property="singleLab" destination="xbO-pk-EjD" id="rn9-Hr-4gs"/>
+                        <outlet property="timeLab" destination="Isy-0x-g3y" id="evO-Wq-GqS"/>
+                        <outlet property="videoView" destination="PSm-kJ-tWT" id="fht-qi-6Hi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="265"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fll-hh-SRq">
+            <objects>
+                <navigationController id="OW7-Xf-wl5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vUA-nG-3NZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="okz-0M-JDr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tte-ed-Yat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-244" y="258"/>
+        </scene>
+    </scenes>
+</document>
